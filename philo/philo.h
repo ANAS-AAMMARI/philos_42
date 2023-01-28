@@ -6,7 +6,7 @@
 /*   By: aaammari <aaammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 10:21:37 by aaammari          #+#    #+#             */
-/*   Updated: 2023/01/27 16:00:09 by aaammari         ###   ########.fr       */
+/*   Updated: 2023/01/28 15:16:01 by aaammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,10 +56,8 @@ int				print_error(char *str);
 void			eat(t_philo *philo);
 void			think(t_philo *philo);
 void			sleep_time(t_philo *philo);
-unsigned long	time_to_ms(struct timeval *now);
 void			create_philo(t_data *data);
 void			print_status(t_philo *philo, char *str);
-int				check_finish(t_data *data);
 unsigned long	get_time_ms(void);
 void			ft_usleep(unsigned long time_to_wait);
 void			destry_and_free_philos(t_data *data);
