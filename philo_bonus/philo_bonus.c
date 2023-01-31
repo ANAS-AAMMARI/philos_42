@@ -6,7 +6,7 @@
 /*   By: aaammari <aaammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 13:00:40 by aaammari          #+#    #+#             */
-/*   Updated: 2023/01/31 13:02:51 by aaammari         ###   ########.fr       */
+/*   Updated: 2023/01/31 13:44:35 by aaammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void	*chech_dead_philo(t_philo *philo)
 			> (unsigned long)philo->data->time_to_die)
 		{
 			sem_wait(philo->data->print);
-			printf("\033[0;31m%d died time: %lu\n",
+			printf("\033[0;31m%d died time: %lu\e[0;37m\n",
 				philo->id_philo, get_time_ms() - philo->data->create_at);
 			exit(1);
 		}

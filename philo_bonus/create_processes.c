@@ -6,12 +6,13 @@
 /*   By: aaammari <aaammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 10:34:17 by aaammari          #+#    #+#             */
-/*   Updated: 2023/01/31 09:51:28 by aaammari         ###   ########.fr       */
+/*   Updated: 2023/01/31 13:51:04 by aaammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo_bonus.h"
 
+// check if the philosopher is dead and routine
 void	philosopher(t_philo *philo)
 {
 	pthread_create(&philo->thread, NULL, (void *)chech_dead_philo, philo);

@@ -6,12 +6,13 @@
 /*   By: aaammari <aaammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:09:07 by aaammari          #+#    #+#             */
-/*   Updated: 2023/01/28 15:08:14 by aaammari         ###   ########.fr       */
+/*   Updated: 2023/01/31 13:48:50 by aaammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo_bonus.h"
 
+// get current time in milliseconds
 unsigned long	get_time_ms(void)
 {
 	struct timeval	now;
@@ -22,6 +23,7 @@ unsigned long	get_time_ms(void)
 	return (time_ms);
 }
 
+// wait for a certain amount of time
 void	ft_usleep(unsigned long time_to_wait)
 {
 	unsigned long	time;

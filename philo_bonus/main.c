@@ -6,12 +6,13 @@
 /*   By: aaammari <aaammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 16:26:31 by aaammari          #+#    #+#             */
-/*   Updated: 2023/01/31 09:44:37 by aaammari         ###   ########.fr       */
+/*   Updated: 2023/01/31 13:51:30 by aaammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo_bonus.h"
 
+// create philosoher processes
 void	create_philo(t_data *data)
 {
 	data->create_at = get_time_ms();
@@ -21,6 +22,7 @@ void	create_philo(t_data *data)
 	close_and_unlink_sema(data);
 }
 
+// main function
 int	main(int argc, char **argv)
 {
 	t_data	data;

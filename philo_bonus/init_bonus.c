@@ -6,12 +6,13 @@
 /*   By: aaammari <aaammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 10:29:43 by aaammari          #+#    #+#             */
-/*   Updated: 2023/01/31 11:53:49 by aaammari         ###   ########.fr       */
+/*   Updated: 2023/01/31 13:48:16 by aaammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo_bonus.h"
 
+// check if the arguments are valid
 int	check_data(t_data *data, int argc)
 {
 	if (argc == 6 && data->noe <= 0)
@@ -28,6 +29,7 @@ int	check_data(t_data *data, int argc)
 	return (1);
 }
 
+// parse the arguments
 void	parsing_arg(t_data *data, int argc, char *argv[])
 {
 	if (argc < 5 || argc > 6)
@@ -42,6 +44,7 @@ void	parsing_arg(t_data *data, int argc, char *argv[])
 		data->noe = -1;
 }
 
+// initialize the semaphores and the philosophers
 void	init_sema(t_data *data)
 {
 	int	i;
@@ -67,6 +70,7 @@ void	init_sema(t_data *data)
 	}
 }
 
+// initialize the data
 int	init_data(t_data *data, int argc, char *argv[])
 {
 	parsing_arg(data, argc, argv);

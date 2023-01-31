@@ -6,7 +6,7 @@
 /*   By: aaammari <aaammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 16:17:47 by aaammari          #+#    #+#             */
-/*   Updated: 2023/01/31 12:32:05 by aaammari         ###   ########.fr       */
+/*   Updated: 2023/01/31 13:40:48 by aaammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	chech_dead_philo(t_data *data)
 			{
 				data->finish = 1;
 				pthread_mutex_lock(&data->print);
-				printf("\033[0;31m%d died time: %lu\n",
+				printf("\033[0;31m%d died time: %lu [0;37m\n",
 					i + 1, get_time_ms() - data->create_at);
 				return (1);
 			}

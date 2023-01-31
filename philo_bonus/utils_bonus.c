@@ -6,12 +6,13 @@
 /*   By: aaammari <aaammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 09:49:01 by aaammari          #+#    #+#             */
-/*   Updated: 2023/01/31 12:58:23 by aaammari         ###   ########.fr       */
+/*   Updated: 2023/01/31 13:49:30 by aaammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philo_bonus.h"
 
+// convert string to integer
 int	ft_atoi(const char *str)
 {
 	int	i;
@@ -38,6 +39,7 @@ int	ft_atoi(const char *str)
 	return (k * s);
 }
 
+// print error message
 int	print_error(char *str)
 {
 	int	i;
@@ -48,6 +50,7 @@ int	print_error(char *str)
 	return (0);
 }
 
+// print status of philosopher
 void	print_status(t_philo *philo, char *str)
 {
 	unsigned long		ms;
@@ -58,6 +61,7 @@ void	print_status(t_philo *philo, char *str)
 	sem_post(philo->data->print);
 }
 
+// close and unlink semaphores
 void	close_and_unlink_sema(t_data *data)
 {
 	if (data->forks)
@@ -77,6 +81,7 @@ void	close_and_unlink_sema(t_data *data)
 	}
 }
 
+// check if all philosophers ate enough
 int	check_finish(t_data *data)
 {
 	int	nbr_of_eat;
