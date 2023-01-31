@@ -6,7 +6,7 @@
 /*   By: aaammari <aaammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 16:26:31 by aaammari          #+#    #+#             */
-/*   Updated: 2023/01/31 13:51:30 by aaammari         ###   ########.fr       */
+/*   Updated: 2023/01/31 19:57:04 by aaammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	create_philo(t_data *data)
 	waitpid(-1, NULL, 0);
 	kill_processes(data);
 	close_and_unlink_sema(data);
+	free(data->philos);
 }
 
 // main function

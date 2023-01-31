@@ -6,7 +6,7 @@
 #    By: aaammari <aaammari@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/30 17:34:56 by aaammari          #+#    #+#              #
-#    Updated: 2023/01/31 13:00:19 by aaammari         ###   ########.fr        #
+#    Updated: 2023/01/31 19:57:27 by aaammari         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,6 @@ clean:
 fclean: clean
 	$(RM) $(NAME) $(NAME_BONUS)
 
-re: fclean all
+re: fclean all bonus
 
 .PHONY: all clean fclean re
