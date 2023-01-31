@@ -6,7 +6,7 @@
 /*   By: aaammari <aaammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 10:21:37 by aaammari          #+#    #+#             */
-/*   Updated: 2023/01/31 12:58:41 by aaammari         ###   ########.fr       */
+/*   Updated: 2023/01/31 20:08:47 by aaammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ typedef struct s_data
 	t_philo			*philos;
 	sem_t			*forks;
 	sem_t			*print;
-	sem_t			*death;
 	unsigned long	create_at;
 }	t_data;
 

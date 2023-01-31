@@ -6,7 +6,7 @@
 /*   By: aaammari <aaammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 10:29:43 by aaammari          #+#    #+#             */
-/*   Updated: 2023/01/31 13:48:16 by aaammari         ###   ########.fr       */
+/*   Updated: 2023/01/31 20:09:06 by aaammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,9 @@ void	init_sema(t_data *data)
 	sem_unlink("death");
 	sem_unlink("print");
 	data->forks = sem_open("forks", O_CREAT, 0700, data->nbr_of_philo);
-	data->death = sem_open("death", O_CREAT, 0700, 1);
 	data->print = sem_open("print", O_CREAT, 0700, 1);
 	data->philos = malloc(sizeof(t_philo) * data->nbr_of_philo);
-	if (!data->philos || data->forks == SEM_FAILED
-		|| data->death == SEM_FAILED || data->print == SEM_FAILED)
+	if (!data->philos || data->forks == SEM_FAILED || data->print == SEM_FAILED)
 		exit(1);
 	while (i < data->nbr_of_philo)
 	{

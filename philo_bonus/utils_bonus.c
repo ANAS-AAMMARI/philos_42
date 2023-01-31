@@ -6,7 +6,7 @@
 /*   By: aaammari <aaammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 09:49:01 by aaammari          #+#    #+#             */
-/*   Updated: 2023/01/31 13:49:30 by aaammari         ###   ########.fr       */
+/*   Updated: 2023/01/31 20:10:04 by aaammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,11 +68,6 @@ void	close_and_unlink_sema(t_data *data)
 	{
 		sem_close(data->forks);
 		sem_unlink("forks");
-	}
-	if (data->death)
-	{
-		sem_close(data->death);
-		sem_unlink("death");
 	}
 	if (data->print)
 	{
