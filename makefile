@@ -6,7 +6,7 @@
 #    By: aaammari <aaammari@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/30 17:34:56 by aaammari          #+#    #+#              #
-#    Updated: 2023/01/30 18:20:56 by aaammari         ###   ########.fr        #
+#    Updated: 2023/01/31 13:00:19 by aaammari         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CFLAGS = -Wall -Wextra -Werror
 RM = rm -f 
 
 NAME = philo_m
-NAME_BONUS = philo_bonus_b
+NAME_BONUS = philo_b
 
 HEADER = ./philo/philo.h
 HEADER_BONUS = ./philo_bonus/philo_bonus.h
@@ -27,7 +27,7 @@ SRCS =	./philo/init.c			\
 		./philo/function_time.c	\
 
 SRCS_BONUS =	./philo_bonus/init_bonus.c			\
-				./philo_bonus/main.c  			\
+				./philo_bonus/main.c  				\
 				./philo_bonus/philo_bonus.c 		\
 				./philo_bonus/utils_bonus.c			\
 				./philo_bonus/function_time_bonus.c	\

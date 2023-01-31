@@ -6,7 +6,7 @@
 /*   By: aaammari <aaammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 10:21:37 by aaammari          #+#    #+#             */
-/*   Updated: 2023/01/28 15:16:01 by aaammari         ###   ########.fr       */
+/*   Updated: 2023/01/31 12:31:12 by aaammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,6 @@ unsigned long	get_time_ms(void);
 void			ft_usleep(unsigned long time_to_wait);
 void			destry_and_free_philos(t_data *data);
 int				chech_dead_philo(t_data *data);
+int				check_finish(t_data *data);
 
 #endif

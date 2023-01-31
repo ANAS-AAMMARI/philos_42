@@ -6,7 +6,7 @@
 /*   By: aaammari <aaammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 13:00:40 by aaammari          #+#    #+#             */
-/*   Updated: 2023/01/30 18:46:50 by aaammari         ###   ########.fr       */
+/*   Updated: 2023/01/31 13:02:51 by aaammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,17 +70,15 @@ void	*chech_dead_philo(t_philo *philo)
 {
 	while (1)
 	{
-		usleep(100);
-		if (philo->num_of_eat == philo->data->noe)
+		usleep(1000);
+		if (check_finish(philo->data))
 			return (NULL);
 		if (get_time_ms() - philo->last_time_to_eat
 			> (unsigned long)philo->data->time_to_die)
 		{
-			philo->data->finish = 1;
 			sem_wait(philo->data->print);
 			printf("\033[0;31m%d died time: %lu\n",
 				philo->id_philo, get_time_ms() - philo->data->create_at);
-			kill_processes(philo->data);
 			exit(1);
 		}
 	}

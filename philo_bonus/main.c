@@ -6,7 +6,7 @@
 /*   By: aaammari <aaammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 16:26:31 by aaammari          #+#    #+#             */
-/*   Updated: 2023/01/30 18:37:11 by aaammari         ###   ########.fr       */
+/*   Updated: 2023/01/31 09:44:37 by aaammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 void	create_philo(t_data *data)
 {
-	int	i;
-
-	i = 0;
 	data->create_at = get_time_ms();
 	create_processes(data);
 	waitpid(-1, NULL, 0);
@@ -33,8 +30,6 @@ int	main(int argc, char **argv)
 	if (!init_data(&data, argc, argv))
 		return (1);
 	init_sema(&data);
-	printf("here\n");
 	create_philo(&data);
-	printf("here\n");
 	return (0);
 }

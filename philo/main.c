@@ -6,7 +6,7 @@
 /*   By: aaammari <aaammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 16:17:47 by aaammari          #+#    #+#             */
-/*   Updated: 2023/01/27 16:05:14 by aaammari         ###   ########.fr       */
+/*   Updated: 2023/01/31 12:32:05 by aaammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	chech_dead_philo(t_data *data)
 		while (++i < data->nbr_of_philo)
 		{
 			usleep(1000);
-			if (data->philos[i].num_of_eat == data->noe)
+			if (check_finish(data))
 				return (1);
 			if (get_time_ms() - data->philos[i].last_time_to_eat
 				> (unsigned long)data->time_to_die)
@@ -37,6 +37,8 @@ int	chech_dead_philo(t_data *data)
 	}
 	return (0);
 }
+// if (data->philos[i].num_of_eat == data->noe)
+// 	return (1);
 
 int	main(int ac, char **av)
 {

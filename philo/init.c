@@ -6,7 +6,7 @@
 /*   By: aaammari <aaammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 10:29:43 by aaammari          #+#    #+#             */
-/*   Updated: 2023/01/28 15:15:45 by aaammari         ###   ########.fr       */
+/*   Updated: 2023/01/31 12:30:50 by aaammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,18 +85,18 @@ int	init_p(t_data *data, int argc, char *argv[])
 	return (1);
 }
 
-// int	check_finish(t_data *data)
-// {
-// 	int	nbr_of_eat;
-// 	int	i;
+int	check_finish(t_data *data)
+{
+	int	nbr_of_eat;
+	int	i;
 
-// 	i = 0;
-// 	nbr_of_eat = 0;
-// 	while (i < data->nbr_of_philo)
-// 	{
-// 		if (data->philos[i].num_of_eat == data->noe)
-// 			nbr_of_eat++;
-// 		i++;
-// 	}
-// 	return (nbr_of_eat == data->nbr_of_philo);
-// }
+	i = 0;
+	nbr_of_eat = 0;
+	while (i < data->nbr_of_philo)
+	{
+		if (data->philos[i].num_of_eat == data->noe)
+			nbr_of_eat++;
+		i++;
+	}
+	return (nbr_of_eat == data->nbr_of_philo);
+}

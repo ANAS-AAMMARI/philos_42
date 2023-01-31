@@ -6,7 +6,7 @@
 /*   By: aaammari <aaammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 10:34:17 by aaammari          #+#    #+#             */
-/*   Updated: 2023/01/30 18:03:50 by aaammari         ###   ########.fr       */
+/*   Updated: 2023/01/31 09:51:28 by aaammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	philosopher(t_philo *philo)
 {
 	pthread_create(&philo->thread, NULL, (void *)chech_dead_philo, philo);
 	routine(philo);
-	pthread_detach(philo->thread);
+	pthread_join(philo->thread, NULL);
 }
 
 // create new process for each philosopher

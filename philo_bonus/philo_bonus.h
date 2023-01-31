@@ -6,7 +6,7 @@
 /*   By: aaammari <aaammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 10:21:37 by aaammari          #+#    #+#             */
-/*   Updated: 2023/01/30 17:58:17 by aaammari         ###   ########.fr       */
+/*   Updated: 2023/01/31 12:58:41 by aaammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,11 @@ typedef struct s_data
 	sem_t			*print;
 	sem_t			*death;
 	unsigned long	create_at;
-	int				finish;
 }	t_data;
 
 typedef struct s_philo
 {
-	int				pid;
+	pid_t			pid;
 	int				id_philo;
 	int				num_of_eat;
 	pthread_t		thread;
@@ -64,5 +63,6 @@ void			init_sema(t_data *data);
 void			*routine(void *arg);
 void			*chech_dead_philo(t_philo *philo);
 int				init_data(t_data *data, int argc, char *argv[]);
+int				check_finish(t_data *data);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: aaammari <aaammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 09:49:01 by aaammari          #+#    #+#             */
-/*   Updated: 2023/01/30 18:45:30 by aaammari         ###   ########.fr       */
+/*   Updated: 2023/01/31 12:58:23 by aaammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,4 +75,20 @@ void	close_and_unlink_sema(t_data *data)
 		sem_close(data->print);
 		sem_unlink("print");
 	}
+}
+
+int	check_finish(t_data *data)
+{
+	int	nbr_of_eat;
+	int	i;
+
+	i = 0;
+	nbr_of_eat = 0;
+	while (i < data->nbr_of_philo)
+	{
+		if (data->philos[i].num_of_eat == data->noe)
+			nbr_of_eat++;
+		i++;
+	}
+	return (nbr_of_eat == data->nbr_of_philo);
 }
